@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>old A</title>
+	<style>
+        *{
+            text-align: center;
+            justify-content: center;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+        }
+        .head{
+            width: 100%;
+            height: 56px;
+          
+            margin: auto;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            margin: 15px 0;
+        }
+        #email, #password{
+            width: 300px;
+            padding: 16px;
+            border-radius: 5px;
+            margin: 10px;
+            border:1px solid rgb(164,167,170)
+        }
+
+        #signup, #Signin{
+            margin: 10px;
+            border-radius: 20px;
+            width: 340px;
+            padding: 16px 60px;
+            
+        }
+        #Signin{
+            color: white;
+            font-size: 16px;
+            background-color: rgb(1,100,255);
+            text-align: center;
+            border: 1px solid rgb(164,167,170);
+        }
+        #signin:hover{
+            background-color: #1b53ac;
+        }
+       #change_text{
+           text-decoration: none;
+           color: black;
+       }
+       #change_text:hover{
+          color: rgb(75, 73, 73);  
+       }
+     
+    </style>
+</head>
+<body>
+	<header class="head">
+		<a href="home.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoGEm6qo6OiF9-A2zByycQbTbw9nT5z6_FP8fNyDnn985F-XMdDKoteDwWd82xrO9idoQ&usqp=CAU"></a> 
+	 </header>
+	
+	<form id = "myForm"onsubmit="signin(event)" action ="">
+		<h3>Sign in to your Walmart account</h3>
+		<div class = "clr">
+			<input type="text" id="email"  placeholder="Email">
+		 </div>  
+		 <div>
+            <input type="password" id="password" placeholder="Password">
+        </div>  
+
+		<div class="pass-link"><a href="#">Forgot passward</a></div>
+        <div>
+
+			<input type ="submit" value="Sign in" id = "Signin" />
+
+		
+			<p>Don't have an account?</p>
+            <button id="signup"><b><a id="change_text" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\signup.html"> Create account</a></b></button>
+</form>
+</body>
+</html>
+
+<script>
+		function signin(e) {
+		e.preventDefault();
+		let myForm = document.getElementById("myForm");
+        //console.log(myForm);
+		let name = myForm.name.value;
+		let email = myForm.email.value;
+		let password = myForm.password.value;
+
+		let all_users = JSON.parse(localStorage.getItem("users"));
+		//console.log(all_user)
+		all_users.forEach(function (user){
+			if(email === user.email && password === user.password){
+				
+				window.location.href = "products.html";
+			}
+		})
+		}
+</script>

@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Homepage</title>
+    <script src="https://kit.fontawesome.com/c5df6b2bbe.js" crossorigin="anonymous"></script>
+
+	<style>
+        *{
+            font-family: 'Domine', serif;
+        }
+			.navbar{
+				display: flex;
+				height:90px;
+				width:100%;
+				background-color:rgb(2, 123, 236);
+				color:white;
+				top:0%;
+				left:0%;
+				
+				position:fixed;
+				z-index: 1;
+			}
+			/* div > div {
+				border: 1px solid red;
+			} */
+			.navbar > div{
+				flex-direction: row;
+
+			}
+			.navbar > div:nth-child(4){
+				flex-grow:1;
+				
+			}
+
+			.navbar > div:nth-child(1){
+				padding:  25px;
+			}
+			input{
+				width: 530px;
+				padding: 3px 10px;
+				border-radius: 50px;
+				border: none;
+				outline: none;
+				height: 30px;
+			}
+			a,
+			a:hover{
+				text-decoration: none;
+			}
+			.search_box{
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.search_btn{
+				width: 30px;
+				height: 30px;
+				background-color: yellow;
+				border-radius: 50px;
+				color: black;
+				position: absolute;
+				right: 2.3rem;
+				display: grid;
+				place-items: center;
+
+			}
+
+			.depdiv{
+				position:relative;
+				display:block;
+				font-family: 'Domine', serif;
+				color:white;
+				margin:25px 10px;
+				padding: 8px;
+				border-radius: 30px;
+				font-size: 15px;
+				background-color: rgb(2, 123, 236);
+			}
+			.depdiv:hover{
+				background-color: rgb(12, 80, 143);;
+			}
+			#cart{
+				background-color: rgb(2, 123, 236);
+			}
+			.form {
+				max-width:100%;
+				height:100%
+			}
+
+			.icon{
+				color: white;
+				padding-right: 5px;
+			}
+
+			@media screen and (max-width : 1024px) {
+				.navbar{
+				display: flex;
+				height:90px;
+				width:100%;
+				background-color:rgb(2, 123, 236);
+				color:white;
+				top:0%;
+				left:0%;
+				position:fixed;
+				}
+				.navbar > div{
+				flex-direction: row;
+				flex-basis: 10%;
+
+				}
+				.navbar > div:nth-child(1){
+					padding:  25px 2px;
+				}
+				input{
+					width: 330px;
+					padding: 3px 10px;
+					border-radius: 50px;
+					border: none;
+					outline: none;
+					height: 30px;
+				}
+				.search_btn{
+					width: 30px;
+					height: 30px;
+					background-color: yellow;
+					border-radius: 50px;
+					color: black;
+					position: absolute;
+					right: 1rem;
+					display: grid;
+					place-items: center;
+				
+				}
+				.depdiv{
+					position:relative;
+					display:flex;
+					font-family: 'Noto Sans Display', sans-serif;
+					color:white;
+					width: 150px;
+					height: 35px;
+					margin:25px 0px;
+					border-radius: 20px;
+					font-size: 12px;
+					background-color: rgb(2, 123, 236);
+				}
+
+			}
+
+			@media screen and (max-width : 786px) {
+				.navbar{
+				display: flex;
+				height:90px;
+				width:100%;
+				background-color:rgb(2, 123, 236);
+				color:white;
+				top:0%;
+				left:0%;
+				position:fixed;
+				}
+				.navbar > div{
+				flex-direction: row;
+				flex-basis: 5%;
+
+				}
+				.navbar > div:nth-child(1){
+				
+					padding:  25px 0px;
+					
+				}
+				input{
+					width: 200px;
+					padding: 3px 10px;
+					border-radius: 50px;
+					border: none;
+					outline: none;
+					height: 30px;
+				}
+				.search_btn{
+					width: 30px;
+					height: 30px;
+					background-color: yellow;
+					border-radius: 50px;
+					color: black;
+					position: absolute;
+					right:5rem;
+					display: grid;
+					place-items: center;
+				
+				}
+				.depdiv{
+					position:relative;
+					display:inline-block;
+					font-family: 'Noto Sans Display', sans-serif;
+					color:white;
+					width: 80px;
+					height: 45px;
+					margin:25px 0px;
+					border-radius: 20px;
+					font-size: 12px;
+					background-color: rgb(2, 123, 236);
+				}
+
+			}
+			@media screen and (max-width : 480px) {
+				input{
+					width: 100px;
+					padding: 3px 10px;
+					border-radius: 50px;
+					border: none;
+					outline: none;
+					height: 30px;
+				}
+				.search_box{
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.search_btn{
+					width: 30px;
+					height: 30px;
+					background-color: yellow;
+					border-radius: 50px;
+					color: black;
+					position: absolute;
+					right: 1rem;
+					display: grid;
+					place-items: center;
+				
+				}
+			}
+
+            li{
+	list-style: none;
+}
+.dropbtn {
+   
+   color: white;
+   padding: 14px;
+   font-size: 16px;
+   border: none;
+   cursor: pointer;
+   border-radius: 13px;
+   margin: 22px;
+  
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+  
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+   border:1px solid black;
+   margin: -20px;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ 
+ 
+ .dropdown:hover .dropdown-content {
+   display: block;
+ }
+ 
+ .dropdown:hover .dropbtn {
+   background-color:  rgb(12, 80, 143);
+ }
+
+ #btn1 {
+	 background-color: rgb(2, 123, 236) ;
+	 width: 140px;
+	 height: 40px;
+	 padding: 1px;
+	 margin: 4px 6px;
+    text-align: center;
+	color: white;
+	border-radius: 10px;
+	justify-content: center;
+ }
+ #btn2{
+	background-color: white ;
+	border: 1px  solid black;
+	width: 140px;
+	height: 40px;
+	 padding: 1px;
+	 margin: 2px;
+	text-align: center;
+	border-radius: 10px;
+	justify-content: center;
+    margin-left: 4px;
+
+ }
+
+	</style>
+
+    <style>
+		/* slideshow */
+
+        #maindiv{
+            color: black;
+            margin: 270px; 
+            height: 50px;
+        }
+		#all_slider{
+                position: relative; 
+              	left: 0px;
+                right: 0px;
+                width: 100%;
+            } 
+      		.slider{
+				position: absolute;
+				top:100px;
+                left: 30px;
+                right:30px;
+                visibility: hidden;
+                transition: 0.5s;
+                opacity: 0;
+            }
+             .active{
+                opacity: 1;
+                visibility: visible;
+            
+            }  
+            .prev{
+                position: absolute;
+                left: 40px;
+               	top: 15rem;
+                border: none;
+                background-color: transparent;
+                color: rgb(66, 66, 66);
+                font-size: 46px;
+                padding: 16px 21px;
+                border-radius: 1000px;
+                transition: 0.5s;
+                outline: none;
+                opacity: 0.6;
+            }
+            .prev:hover{
+                opacity: 1;
+            }
+            .next{
+                position: absolute;
+                right: 40px;
+                top: 15rem;
+                border: none;
+                background-color: transparent;
+                color: rgb(66, 66, 66);
+                font-size: 46px;
+                padding: 16px 21px;
+                border-radius: 1000px;
+                transition: 0.5s;
+                outline: none;
+                opacity: 0.6;
+            }
+            .next:hover{
+                opacity: 1;
+            }
+    </style>
+
+	<style>
+		/* 1st div */
+
+		
+		.mainpage0{
+			width:95%;
+	        height:70%;
+			position: absolute;
+			left: 30px;
+			right:30px;
+			border:0px solid rgb(26, 55, 75);
+			display:flex;
+			flex-direction: row;
+		}
+		.page0{
+			border:0px solid rgb(26, 55, 75);
+			width:390px;
+			margin:14px 14px 14px 14px;
+			
+		}
+		.page00{
+			display: flex;
+			border:0px solid rgb(26, 55, 75);
+			width:350px;
+			height:130px;
+			margin:0px 0px 14px 0px;
+			padding:14px 14px 14px 14px;
+			box-shadow: 1px 2px 2px 2px  rgb(202, 199, 199);
+			border-radius:6px;
+			background-color:  rgb(230,241,252);
+		}
+		.page00 > div:nth-child(2) {
+			flex-grow: 1;
+		}
+		.page01{
+			border:0px solid rgb(26, 55, 75);
+			width:350px;
+			height:267px;
+			margin:0px 0px 0px 0px;
+			padding:14px 14px 0px 14px;
+			box-shadow: 1px 2px 2px 2px  rgb(202, 199, 199);
+			border-radius:6px;
+	
+		}
+		.page1{
+			border:0px solid rgb(26, 55, 75);
+			width:360px;
+			height:423px;
+			margin:14px 30px 14px 30px;
+			padding:14px 14px 14px 14px;
+			box-shadow: 1px 2px 2px 2px  rgb(202, 199, 199);
+			border-radius:6px;
+		}
+		.page2{
+			border:0px solid rgb(26, 55, 75);
+			width:360px;
+			height:423px;
+			margin:14px 14px 14px 14px;
+			padding:14px 14px 14px 14px;
+			box-shadow: 1px 2px 2px 2px  rgb(202, 199, 199);
+			border-radius:6px;
+		}
+		#fontheadforpage1{
+			display: grid;
+			grid-gap: 60px;
+			grid-template-columns: 120px 120px;
+			margin-top: 50px;
+			margin-left: 20px;
+		}
+		#fontheadforpage2{
+			display: grid;
+			grid-gap: 80px;
+			grid-template-columns: 110px 110px;
+			grid-template-rows: 100px 100px;
+			margin-top: 50px;
+			margin-left: 25px;
+		}
+		.seetimes{
+			background-color:  rgb(230,241,252);
+		}
+		.pharmacy{
+			width:90px;
+			height:90px;
+			background-color:  rgb(230,241,252);
+			border-radius:55px;
+			margin:10px 10px 10px 10px;
+			border:0px solid rgb(26, 55, 75);
+		}
+		.auto{
+			width:90px;
+			height:90px;
+			background-color:  rgb(230,241,252);
+			border-radius:45px;
+			margin:10px 10px 10px 10px;
+			border:0px solid rgb(26, 55, 75);
+		}
+		.cakes{
+			width:90px;
+			height:90px;
+			background-color:  rgb(230,241,252);
+			border-radius:45px;
+			margin:10px 10px 10px 10px;
+			border:0px solid rgb(26, 55, 75);
+		}
+		.asd{
+			width:100%;
+			height: 93%;
+			border:0px solid rgb(26, 55, 75);
+			display:flex;
+		}
+		.dsa{
+			width:33%;
+			height: 93%;
+			border:0px solid rgb(26, 55, 75);
+		}
+		.text{
+			text-align: center;
+			font-family: 'Noto Sans Display', sans-serif;
+		}
+        .description{
+            color: black;
+			
+        }
+
+	</style>
+
+	<style>
+		/* 2nd cart div */
+		.mainpage1{
+			border:0px solid rgb(26, 55, 75);
+			margin-top: 800px;
+			margin-left: 35px;
+			margin-right: 35px;
+			padding: 15px;
+			box-shadow: 1px 2px 2px 2px  rgb(202, 199, 199);
+			border-radius:6px;
+		}
+		.first{
+		display:flex;
+		width:100%;
+		height:20%;
+		align-items: center;
+		
+	}
+	.first > div {
+		padding: 15px;
+
+	}
+	.img1{
+
+		width:80%;
+		height: 100%;
+	}
+	.img1{
+
+		
+	}
+	.add{
+			border:1px solid white;
+			height:36px;
+			width:55px;
+			margin: 5%;
+			text-align:center;
+			background-color:rgb(2, 123, 236);
+			border-radius: 18px;
+			color:white;
+			align-items: center;
+		}
+		.addclr{
+			color:white;
+			text-align: center;
+			margin-top: 8px;
+			font-size:15px;
+			font-family: 'Roboto', sans-serif;
+		}
+
+	
+         .slide{
+			 margin:10% 10% 0% 15%
+		 }
+
+		 /* last cart div*/
+		 .mainpage2{
+			border:0px solid rgb(26, 55, 75);
+			margin-left: 35px;
+			margin-right: 35px;
+			padding: 15px;
+			box-shadow: 1px 2px 2px 2px  rgb(202, 199, 199);
+			border-radius:6px;
+		 }
+	</style>
+
+	
+		
+
+	 <style> 
+
+ 		/* redbull */
+
+		.redbull{
+			width:95%;
+			border:0px solid rgb(26, 55, 75);
+			margin: 60px 20px 60px 35px;
+		}
+		#freeShipping{
+            width: 100%;
+            background-image: url("https://i.pinimg.com/originals/4c/57/52/4c575204eade4a06aba5e6aaab155840.jpg");
+            border: 1px solid white;
+            height: 40px;
+            border-radius: 10px;
+          	padding:10px 0 10px 0;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+			font-family: 'Noto Sans Display', sans-serif;
+            
+        }
+        #lastDiv{
+            width: 100%;
+            display: flex;
+            margin-top: 2%;
+            box-shadow: 1px 1px 1px 1px gray;
+            border-radius: 10px;
+            height: 200px;
+        }
+        #first{
+            width: 18%;
+            margin-left: 2%;
+            justify-content: center;
+        }
+        #sec{
+            width: 22%;
+          
+            justify-content: center;
+            text-align: center;
+        }
+        #third{
+            width: 58%;
+        }
+
+        #smallPic{
+            width: 100%;
+            height: 100%;
+        }
+
+        #logo{
+            width: 6%;
+            height: 90%;
+			
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #shop-now{
+            padding: 2%;
+            width: 40%;
+            border-radius: 12px;
+            justify-content: center;
+            background-color: white;
+        }
+		.newone{
+			height: 10%;
+			width: 10%;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- navbar -->
+    
+    <div class = "navbar">
+		
+		
+        <div >
+           
+			<a href="index001.html"><img src="https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg">
+        </div>
+        <div class="dropdown">
+            <li class="dropbtn"><a href="#" ><i class="fas fa-th-large icon"></i></a>Departments</li>
+            <div class="dropdown-content">
+                                    <a>All Departments</a>
+                                    <a>Electronics</a>
+                                    <a>Clothings</a>
+                                    <a>Toys & Games</a>
+                                    <a>Grocery</a>
+                                    <a>Home Furniture & Appliances</a>
+                                    <a>Household Essentials</a>
+                                    <a>Beauty</a>
+                                    <a>Personal Care</a>
+                                    <a>Sports & Outdoor</a>
+            </div>
+        </div> 
+
+        <div class="dropdown">
+            <li class="dropbtn"><a href="#" ><i class="fas fa-th-large icon"></i></a>Services</li>
+            <div class="dropdown-content">
+                                  
+                    <a> All Services</a>
+                    <a>Auto Care centre</a>
+                    <a>Health Service</a>
+                    <a>Custom Cakes</a>
+                    <a>Photo Services</a>
+                    <a>List, Gifts & Registries</a>
+                    <a>Financial Services</a>
+                    <a>Get Inspried</a>
+            </div>
+        </div> 
+        
+    
+            
+                
+        <div class="search_box">
+                <input type="text" id =  "Search" placeholder="Search Everything at Walmart online and in store" >
+                <a href="#"  class="search_btn"><i class="fas fa-search "></i></a>
+        </div>
+
+        <div class="dropdown">
+            <li class="dropbtn"><a href="#" ><i class="far fa-folder icon"></i></a>My Items</li>
+            <div class="dropdown-content">
+                                  
+                    <a><i class="fa-thin fa-box-open"></i>Reorder</a>
+                    <a><i class="fa-thin fa-rectangle-list"></i>Lists</a>
+                    <a><i class="fa-thin fa-gift-card"></i>Registries</a>
+            </div>
+        </div> 
+        
+        
+        <div class="dropdown">
+            <li class="dropbtn"><a href="#" ><i class="far fa-folder icon"></i></a>Account</li>
+            <div class="dropdown-content">
+                                  
+                    <button id="btn1"><a href="sign-in.html">Sign In</a></button>
+                    <button id="btn2"><a href="sign-up.html">Create An Account</a></button>
+                    <a><i class="fa-thin fa-scroll-old"></i>Purchace History</a>
+            </div>
+        </div>   
+        
+        
+        
+        <div  class = "dropdown" id = "cart">
+        <li class="dropbtn"><a href="payment.html" ><i class="fas fa-shopping-cart icon"></i></a>Cart</li>
+        </div>	
+</div>
+
+	  <!-- slideshow -->
+
+      <div id="maindiv" >
+		<div class="all_slider">
+			<div class="slider active">
+				<img  src="image1.png" alt="">
+			</div>
+			<div class="slider">
+				<img src="image2.png" alt="">
+			</div>
+			<div class="slider">
+				<img src="image3.png" alt="">
+			</div>
+			<button onclick="prev()" id="prev" class="prev"><i class="fas fa-chevron-left"></i></button>
+			<button onclick="next()" id="next"  class="next"><i class="fas fa-chevron-right"></i></button>
+		</div>
+        
+     </div>
+
+	 <!-- IST Div -->
+
+	 <div class = mainpage0>
+
+		<div class ="page0">
+			<div class ="page00">
+				<div> <b style="font-size: 18px;">Reserve your pickup delivery </b>
+				</div> 
+				<div></div>
+				<div>
+				<button style="border-radius: 10px; display: inline; width: 80px; padding: 5px 0;border-radius: 15px;border: 1px solid black;"><b> see times</b></button> 
+				</div> 
+			</div>
+			<div class ="page01">
+				
+		   <div >  <b style="font-size: 18px;"> Popular services </b>  </div> 
+			  
+			  <div class = "asd">
+				  <div class = "dsa">
+					<div class ="pharmacy ">
+					<img src="https://i5.walmartimages.com/dfw/4ff9c6c9-64d0/k2-_f0d316e7-25a9-4436-a60d-2efd62702aa3.v1.png?odnHeight=90&odnWidth=90&odnBg=FFFFFF">
+				  </div>
+				  <div class ="text">Pharmacy</div>
+		
+		
+		</div>
+		<div class = "dsa">
+		<div class ="auto ">
+			<img src="https://i5.walmartimages.com/dfw/4ff9c6c9-15ce/k2-_ad628e1a-53e3-4f61-9359-a2660f4792af.v1.png?odnHeight=90&odnWidth=90&odnBg=FFFFFF">
+		</div>
+		<div class ="text">Auta Care Center</div>
+		
+		</div>
+		<div class = "dsa">
+		<div class ="auto ">
+			<img src="https://i5.walmartimages.com/dfw/4ff9c6c9-7115/k2-_72d8477e-8b41-404f-b891-c6ee5b6e68ff.v1.png?odnHeight=90&odnWidth=90&odnBg=FFFFFF">
+		</div>
+		<div class ="text">Custom Cakes</div>
+		
+		</div>
+		
+				   </div>
+  
+			</div>
+		</div>
+		
+		<div class ="page1">
+	    	 <b style="font-size: 18px;">Continue your shopping </b>	
+			<div id = "fontheadforpage1">	
+				
+				<div><a href=""><img src="https://i5.walmartimages.com/asr/d40772a4-e87d-4385-a712-b27f1b793697.e046de405bd3e603be4fe45ccce98d5a.jpeg?odnHeight=112&odnWidth=112&odnBg=FFFFFF"></a></div>
+				<div><a href=""><img src="https://i5.walmartimages.com/asr/104b5bcf-e7da-497b-87f6-0a5a56249d27_1.5c18e44aae7893f3044b2aeeed360603.jpeg?odnHeight=112&odnWidth=112&odnBg=FFFFFF"></a></div>
+                
+
+
+				<div><a href=""><img src="https://i5.walmartimages.com/asr/61e865fc-df33-4494-ad33-193740b366c5.6c2e4549ab3500f82d172aeb4149c7eb.jpeg?odnHeight=112&odnWidth=112&odnBg=FFFFFF"></a></div>
+				<div><a href=""><img src="https://i5.walmartimages.com/asr/17187188-5b63-4c91-b9e8-e1d4ed8b1560.e39988e44f9ff3619ecddb8d746ee015.jpeg?odnHeight=112&odnWidth=112&odnBg=FFFFFF"></a></div>
+			</div> 
+		
+		</div>
+		
+		
+		<div class ="page2">
+			<b style="font-size: 18px;">Spoky Savings</b>
+					<div id = "fontheadforpage2"> 
+						<div>
+							<a href=""><img src="https://i5.walmartimages.com/dfw/4ff9c6c9-3bcd/k2-_c566840d-c66f-4eb2-9c30-fd4dfb83a29e.v1.jpg?odnHeight=112&odnWidth=112&odnBg=FFFFFF"></a>
+							<div style="font-size: 15px;">Upto 50% off on flash picks</div>
+						</div>
+						<div>
+							<a href=""><img src="https://i5.walmartimages.com/dfw/4ff9c6c9-fea3/k2-_24a128d5-72fd-42f2-82a8-80b2ed2e3940.v1.jpg?odnHeight=112&odnWidth=112&odnBg=FFFFFF"></a>
+							<div style="font-size: 15px;">20% off on home Essentials</div>
+						</div>
+						
+						<div>
+							<a href=""><img src="https://i5.walmartimages.com/dfw/4ff9c6c9-42cf/k2-_fbcba533-6996-43ed-8569-239ed21b1775.v1.jpg?odnHeight=112&odnWidth=112&odnBg=FFFFFF"></a>
+							<div style="font-size: 15px;">15% off on Home Inprovement</div>
+						</div>
+						<div>
+							<a href=""><img src="https://i5.walmartimages.com/dfw/4ff9c6c9-798b/k2-_f6a53e21-8525-4392-8482-9ab31e7fac28.v1.jpg?odnHeight=112&odnWidth=112&odnBg=FFFFFF"></a>
+							<div style="font-size: 15px;">60% off on fashion</div>
+						</div>
+					</div>
+				</div> 
+				
+			</div>
+		</div>
+
+		<!-- add to cart -->
+
+		<div class ="mainpage1">
+			<a style="color: black;" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\products.html"><div><h3 class ="build">Save on Mobiles, Computers & Accessories</h3></div></a>
+			<div class = "first">
+				<div>
+					<div>
+					<a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/1b917439-0081-470f-a3f2-083deb53a77c.70bf503010d705a9398c54f2dad10c15.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+					<div class = "add">
+						<p class ="addclr">+ Add</p>
+						
+						
+		
+					</div>
+					<a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><div class = "product"><b>$799.89</b></div>
+					<div>Samsung Ultra Note 20</div>
+					<div>Pickup</div></a>
+					</div>
+				</div>
+				
+				
+				<div>
+					<div>
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/31d1b67b-be21-4492-b6c3-4533a7997005.9cc9dc004bf1c91226b2d54ff1a4b042.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+                        <div class = "add">
+                            <p class ="addclr">+ Add</p>
+                            
+                            
+            
+                        </div>
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><div class = "product"><b>$100.67</b></div>
+                        <div>Ipad pro 11 inch</div>
+                        <div>Pickup</div></a>
+                        </div>
+				</div>
+				
+		
+		
+				<div>
+                    <div>
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/dfb13bb3-ea28-4810-9052-a54347751d35_1.3f5ab6f555338ee86cb23155e8bce2fe.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+                        <div class = "add">
+                            <p class ="addclr">+ Add</p>
+                            
+                            
+            
+                        </div>
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><div class = "product"><b>$100.08
+						</b></div>
+                        <div>Black Mi 10000 mAh Powerbank 2</div>
+                        <div>Pickup</div></a>
+                        </div>
+				</div>
+				
+		
+				<div>
+					<div>
+					<a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/a03d58dd-531a-4b91-bbe4-ba5e4aa7a016.99b6d84eb43bca57d0dcbe29a813506a.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+					<div class = "add">
+						<p class ="addclr">+ Add</p>
+						
+						
+		
+					</div>
+					<a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><div class = "product"><b>$678.22</b></div>
+					<div>
+						Lenevo 14s Core i3 7th Gen</div>
+					<div>Pickup</div></a>
+					</div>
+				</div>
+				
+		
+				<div>
+                    <div>
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/6ac861b1-39b7-49f2-b59c-f84054ebce4f.509dba035dc9b74987eff023fc04714d.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+                        <div class = "add">
+                            <p class ="addclr">+ Add</p>
+                            
+                            
+            
+                        </div>
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><div class = "product"><b>$500.45</b></div>
+                        <div>Vivo 19</div>
+                        <div>Pickup</div></a>
+                        </div>
+				</div>
+		
+			
+		
+			
+				
+		
+					<div>
+						<div>
+                            <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/52e63e42-8b61-40a6-bd43-22db0f48de61_1.ca4bed073647fb03b64ee25711f1b1bd.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+                            <div class = "add">
+                                <p class ="addclr">+ Add</p>
+                                
+                                
+                
+                            </div>
+                            <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><div class = "product"><b>$200.00</b></div>
+                            <div>M235 Wireless Mouse</div>
+                            <div>Pickup</div></a>
+                            </div>
+				</div>
+				
+			</div>
+						
+		</div>
+
+		<!-- redBull -->
+		
+
+		<div class = "redbull" > 
+
+			<a><div id="freeShipping">
+					
+				<img id="logo" src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-260w,f_auto,q_auto:best/newscms/2020_38/3412852/screen_shot_2020-09-17_at_3-56-36_pm.png">
+			   Members get free shipping* with no order minimum! *Restrictions apply.  <u>  try walmart+ for free</u> 
+				
+			</div>
+			</a>
+			
+			<div id="lastDiv">
+				<div id="first">
+					<img id="smallPic" src="https://tpc.googlesyndication.com/simgad/18379231906223149861?">
+				</div>
+				
+				<!--black line-->
+				<div style="width: 1px; height: 70% ; display: inline-block; background-color: rgb(197, 189, 189); margin: 18px"></div>
+			
+				<div id="sec">
+					<h3>The energy you need</h3>
+					<div>Red Bull gives you wiiings.</div>
+				</br>
+				  <div > <button id="shop-now">Shop Now</button></div>
+				   
+				</div>
+				<div id="third">
+					<img src="https://tpc.googlesyndication.com/simgad/2683146666206610658?">
+				</div>
+			   
+			
+			</div>
+			</div>
+
+		<!-------- 2nd cart ------- -->
+
+		<div class ="mainpage2">
+		<a style="color: black;" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\products.html"><div><h3 class ="build" >Trending in Computer Parts, Printers and Accessories
+		</h3></div></a>	
+			<div class = "first">
+				<div>
+					<div>
+
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/ba7cd9fe-c332-4650-b014-ab425642b00f.1180556735ba1ff0356d2f2ace5ac004.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+
+                     
+                        <div class = "add">
+                            <p class ="addclr">+ Add</p>
+                            
+                            
+            
+                        </div>
+                        <a class="description newone" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><div class = "product"><b>$99.00</b></div>
+                        <div>Skullcandy Hesh2 Wireless Headphone</div>
+                        <div>Pickup</div></a>
+                        </div>
+				</div>
+				
+		
+		
+		
+				<div>
+                    <div>
+
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/af3386f1-ab5b-44ca-ad21-88304c613fe6.6c781355173b6745e2f9adcafe20f110.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+
+                      
+
+                        <div class = "add">
+                            <p class ="addclr">+ Add</p>
+                            
+                            
+            
+                        </div>
+                        <a class="description newone" href="C:\Users\HP\Documents\GitHub\Walmart\walmart\product_details.html"><div class = "product"><b>$1200.52</b></div>
+                        <div>Samsung Smart Tv</div>
+                        <div>Pickup</div></a>
+                        </div>
+		
+				</div>
+		
+		
+				<div>
+					<div>
+
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/c0cfd9df-a8ad-478d-a6c4-49440ba784c1.a82140ad6e44dc266fc788bcc2342549.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+
+                     
+                        <div class = "add">
+                            <p class ="addclr">+ Add</p>
+                            
+                            
+            
+                        </div>
+                        <a class="description newone" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html"><div class = "product"><b>$300.44</b></div>
+                        <div>Rii Primer RGB Compact Keyboard</div>
+                        <div>Pickup</div></a>
+                        </div>
+		
+				</div>
+				
+			
+				
+		
+					<div>
+                        <div>
+                            <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/bb49560a-1e5e-4ac1-8b1e-a53597f44628_1.ceacbceb920d60041a6245961c2828f7.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+                            <div class = "add">
+                                <p class ="addclr">+ Add</p>
+                                
+                                
+                
+                            </div>
+                            <a class="description newone" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html"><div class = "product"><b>$450.89</b></div>
+                            <div>Play Station 4</div>
+                            <div>Pickup</div></a>
+                            </div>
+				</div>
+				
+			</div>
+						
+		</div>
+
+</body>
+</html>
+
+
+ <script>
+   setInterval(function(){
+    if ( document.getElementsByClassName("slider")[0].classList.contains("active")){   // check for active class for the 1st div
+        document.getElementsByClassName("slider")[1].classList.add("active")             //active 2nd div 
+        document.getElementsByClassName("slider")[0].classList.remove("active")          // remove Ist div from active class
+    }else if ( document.getElementsByClassName("slider")[1].classList.contains("active") ){
+        document.getElementsByClassName("slider")[2].classList.add("active")       
+        document.getElementsByClassName("slider")[1].classList.remove("active") 
+    }else if ( document.getElementsByClassName("slider")[2].classList.contains("active") ){
+        document.getElementsByClassName("slider")[0].classList.add("active")       
+        document.getElementsByClassName("slider")[2].classList.remove("active") 
+    }
+},3000);
+
+function next(){
+    if ( document.getElementsByClassName("slider")[0].classList.contains("active")){   // check for active class for the 1st div
+        document.getElementsByClassName("slider")[1].classList.add("active")             //active 2nd div 
+        document.getElementsByClassName("slider")[0].classList.remove("active")          // remove Ist div from active class
+    }else if ( document.getElementsByClassName("slider")[1].classList.contains("active") ){
+        document.getElementsByClassName("slider")[2].classList.add("active")       
+        document.getElementsByClassName("slider")[1].classList.remove("active") 
+    }else if ( document.getElementsByClassName("slider")[2].classList.contains("active") ){
+        document.getElementsByClassName("slider")[0].classList.add("active")       
+        document.getElementsByClassName("slider")[2].classList.remove("active") 
+    }
+}
+
+function prev(){
+    if ( document.getElementsByClassName("slider")[0].classList.contains("active")){   // check for active class for the 1st div
+        document.getElementsByClassName("slider")[2].classList.add("active")             //active last div 
+        document.getElementsByClassName("slider")[0].classList.remove("active")          // remove Ist div from active class
+    }else if ( document.getElementsByClassName("slider")[2].classList.contains("active") ){
+        document.getElementsByClassName("slider")[1].classList.add("active")       
+        document.getElementsByClassName("slider")[2].classList.remove("active") 
+    }else if ( document.getElementsByClassName("slider")[1].classList.contains("active") ){
+        document.getElementsByClassName("slider")[0].classList.add("active")       
+        document.getElementsByClassName("slider")[1].classList.remove("active") 
+    }
+}
+</script>

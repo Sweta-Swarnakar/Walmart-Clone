@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Products</title>
+	<script src="https://kit.fontawesome.com/c5df6b2bbe.js" crossorigin="anonymous"></script>
+	<style>
+
+		/* product details */
+		#container{
+			display: flex;
+            padding: 10px;
+			margin-top: 100px;
+		}
+		#container > div{
+			margin-right: 20px;
+		}
+		.btn_header{
+			width: 150px;
+			padding: 15px 10px;
+			border-radius: 20px;
+			border: 0px solid rgb(2, 123, 236);
+			background-color: rgb(2, 123, 236);
+			color: white;
+			align-items: center;
+		}
+		.btn_header:hover{
+			background-color: rgb(12, 80, 143);
+		}
+		#products{
+			margin:5% 3% 3% 3%;
+			height:1000px;
+			display :grid;
+			grid-template-columns: 20% 20% 20% 20%;
+			grid-gap:5%;
+			justify-content: center;
+		
+		}
+
+		button{
+			border:1px solid white;
+			height:36px;
+			width:55px;
+			margin: 5%;
+			text-align:center;
+			background-color:rgb(2, 123, 236);
+			border-radius: 18px;
+			color:white
+		}
+
+		img{
+			width:80%;
+			height:60%;
+		}
+		.go{
+			text-align: center;
+			height:20px;
+			width:501px;
+			
+			border:1px solid red
+			
+		}
+		.go1{
+			text-align: center;
+			height:20px;
+			width:501px;
+			
+			border:1px solid red
+			
+		}
+		.tanishq{
+         text-align: center;
+		}
+		*{
+            font-family: 'Domine', serif;
+        }
+		.navbar{
+				display: flex;
+				height:90px;
+				width:100%;
+				background-color:rgb(2, 123, 236);
+				color:white;
+				top:0%;
+				left:0%;
+				
+				position:fixed;
+				z-index: 1;
+			}
+			/* div > div {
+				border: 1px solid red;
+			} */
+			.navbar > div{
+				flex-direction: row;
+
+			}
+			.navbar > div:nth-child(4){
+				flex-grow:1;
+				
+			}
+
+			.navbar > div:nth-child(1){
+				padding:  25px;
+			}
+			input{
+				width: 530px;
+				padding: 3px 10px;
+				border-radius: 50px;
+				border: none;
+				outline: none;
+				height: 30px;
+			}
+			a,
+			a:hover{
+				text-decoration: none;
+			}
+			.search_box{
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.search_btn{
+				width: 30px;
+				height: 30px;
+				background-color: yellow;
+				border-radius: 50px;
+				color: black;
+				position: absolute;
+				right: 2.3rem;
+				display: grid;
+				place-items: center;
+
+			}
+
+			.depdiv{
+				position:relative;
+				display:block;
+				font-family: 'Domine', serif;
+				color:white;
+				margin:25px 10px;
+				padding: 8px;
+				border-radius: 30px;
+				font-size: 15px;
+				background-color: rgb(2, 123, 236);
+			}
+			.depdiv:hover{
+				background-color: rgb(12, 80, 143);;
+			}
+			#cart{
+				background-color: rgb(2, 123, 236);
+			}
+			.form {
+				max-width:100%;
+				height:100%
+			}
+
+			.icon{
+				color: white;
+				padding-right: 5px;
+			}
+
+			@media screen and (max-width : 1024px) {
+				.navbar{
+				display: flex;
+				height:90px;
+				width:100%;
+				background-color:rgb(2, 123, 236);
+				color:white;
+				top:0%;
+				left:0%;
+				position:fixed;
+				}
+				.navbar > div{
+				flex-direction: row;
+				flex-basis: 10%;
+
+				}
+				.navbar > div:nth-child(1){
+					padding:  25px 2px;
+				}
+				input{
+					width: 330px;
+					padding: 3px 10px;
+					border-radius: 50px;
+					border: none;
+					outline: none;
+					height: 30px;
+				}
+				.search_btn{
+					width: 30px;
+					height: 30px;
+					background-color: yellow;
+					border-radius: 50px;
+					color: black;
+					position: absolute;
+					right: 1rem;
+					display: grid;
+					place-items: center;
+				
+				}
+				.depdiv{
+					position:relative;
+					display:flex;
+					font-family: 'Noto Sans Display', sans-serif;
+					color:white;
+					width: 150px;
+					height: 35px;
+					margin:25px 0px;
+					border-radius: 20px;
+					font-size: 12px;
+					background-color: rgb(2, 123, 236);
+				}
+
+			}
+
+			@media screen and (max-width : 786px) {
+				.navbar{
+				display: flex;
+				height:90px;
+				width:100%;
+				background-color:rgb(2, 123, 236);
+				color:white;
+				top:0%;
+				left:0%;
+				position:fixed;
+				}
+				.navbar > div{
+				flex-direction: row;
+				flex-basis: 5%;
+
+				}
+				.navbar > div:nth-child(1){
+				
+					padding:  25px 0px;
+					
+				}
+				input{
+					width: 200px;
+					padding: 3px 10px;
+					border-radius: 50px;
+					border: none;
+					outline: none;
+					height: 30px;
+				}
+				.search_btn{
+					width: 30px;
+					height: 30px;
+					background-color: yellow;
+					border-radius: 50px;
+					color: black;
+					position: absolute;
+					right:5rem;
+					display: grid;
+					place-items: center;
+				
+				}
+				.depdiv{
+					position:relative;
+					display:inline-block;
+					font-family: 'Noto Sans Display', sans-serif;
+					color:white;
+					width: 80px;
+					height: 45px;
+					margin:25px 0px;
+					border-radius: 20px;
+					font-size: 12px;
+					background-color: rgb(2, 123, 236);
+				}
+
+			}
+			@media screen and (max-width : 480px) {
+				input{
+					width: 100px;
+					padding: 3px 10px;
+					border-radius: 50px;
+					border: none;
+					outline: none;
+					height: 30px;
+				}
+				.search_box{
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.search_btn{
+					width: 30px;
+					height: 30px;
+					background-color: yellow;
+					border-radius: 50px;
+					color: black;
+					position: absolute;
+					right: 1rem;
+					display: grid;
+					place-items: center;
+				
+				}
+			}
+
+            li{
+	list-style: none;
+}
+.dropbtn {
+   
+   color: white;
+   padding: 14px;
+   font-size: 16px;
+   border: none;
+   cursor: pointer;
+   border-radius: 13px;
+   margin: 22px;
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ 
+ 
+ .dropdown:hover .dropdown-content {
+   display: block;
+ }
+ 
+ .dropdown:hover .dropbtn {
+   background-color:  rgb(12, 80, 143);
+ }
+
+ #btn1 {
+	 background-color: rgb(2, 123, 236) ;
+	 width: 140px;
+	 height: 40px;
+	 padding: 1px;
+	 margin: 4px 6px;
+    text-align: center;
+	color: white;
+	border-radius: 10px;
+	justify-content: center;
+ }
+ #btn2{
+	background-color: white ;
+	border: 1px  solid black;
+	width: 140px;
+	height: 40px;
+	 padding: 1px;
+	 margin: 2px;
+	text-align: center;
+	border-radius: 10px;
+	justify-content: center;
+    margin-left: 4px;
+
+ }
+
+
+ 
+ #im{
+	 width: 100px;
+	 height:40px;
+ }
+
+.cartbutton{
+	color: white;
+   padding: 14px;
+   font-size: 16px;
+   border: none;
+   cursor: pointer;
+   border-radius: 13px;
+   margin: 22px;
+   border:1px solid red
+}
+	</style>
+	</style>
+
+</head>
+<body>
+
+
+	  
+    <div class = "navbar">
+		
+        <div >
+            <a href="index001.html"><img src= "https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg" /> </a>
+        </div>
+        <div class="dropdown">
+            <li class="dropbtn"><a href="#" ><i class="fas fa-th-large icon"></i></a>Departments</li>
+            <div class="dropdown-content">
+                                    <a>All Departments</a>
+                                    <a>Electronics</a>
+                                    <a>Clothings</a>
+                                    <a>Toys & Games</a>
+                                    <a>Grocery</a>
+                                    <a>Home Furniture & Appliances</a>
+                                    <a>Household Essentials</a>
+                                    <a>Beauty</a>
+                                    <a>Personal Care</a>
+                                    <a>Sports & Outdoor</a>
+            </div>
+        </div> 
+
+        <div class="dropdown">
+            <li class="dropbtn"><a href="#" ><i class="fas fa-th-large icon"></i></a>Services</li>
+            <div class="dropdown-content">
+                                  
+                    <a> All Services</a>
+                    <a>Auto Care centre</a>
+                    <a>Health Service</a>
+                    <a>Custom Cakes</a>
+                    <a>Photo Services</a>
+                    <a>List, Gifts & Registries</a>
+                    <a>Financial Services</a>
+                    <a>Get Inspried</a>
+            </div>
+        </div> 
+        
+    
+            
+                
+        <div class="search_box">
+                <input type="text" id =  "Search" placeholder="Search Everything at Walmart online and in store" >
+                <a href="#"  class="search_btn"><i class="fas fa-search "></i></a>
+        </div>
+
+        <div class="dropdown">
+            <li class="dropbtn"><a href="#" ><i class="far fa-folder icon"></i></a>My Items</li>
+            <div class="dropdown-content">
+                                  
+                    <a><i class="fa-thin fa-box-open"></i>Reorder</a>
+                    <a><i class="fa-thin fa-rectangle-list"></i>Lists</a>
+                    <a><i class="fa-thin fa-gift-card"></i>Registries</a>
+            </div>
+        </div> 
+        
+        
+        <div class="dropdown">
+            <li class="dropbtn"><a href="#" ><i class="far fa-folder icon"></i></a>Account</li>
+            <div class="dropdown-content">
+                                  
+                    <button id="btn1"><a href="sign_in.html">Sign In</a></button>
+                    <button id="btn2"><a href="signup.html">Create An Account</a></button>
+                    <a><i class="fa-thin fa-scroll-old"></i>Purchace History</a>
+            </div>
+        </div>   
+        
+        
+        
+        <div  class = "dropdown" id = "cart">
+        <li class="dropbtn"><a href="payment.html" ><i class="fas fa-shopping-cart icon"></i></a>Cart</li>
+		<div id = "cartSize"> </div>
+        </div>	
+</div>
+
+
+	<!-- <h1 class ="tanishq"> Tanishq</h1>
+	<p class ="tanishq"> </p>
+	<div class = "add">
+		<p class ="addclr">+ Add</p>
+		</div> -->
+
+
+		<div id="container">
+		
+			<div><button class="btn_header" onclick = "sortLtoH()"> Sort Low  High</button></div>
+			<div><button class="btn_header" onclick = "sortHtoL()"> Sort High To Low</button></div>
+			<div><button class="btn_header" onclick = "filterbyPrice()"> Filter</button></div>
+		  
+			 <div><a href="C:\Users\HP\Desktop\MasaiHTML\eCommerce_website\online-jwellery\cart.html"><button class="btn_header"> Cart</button></a></div>
+		</div>
+		<div id ="products"></div>
+
+
+</body>
+</html>
+<script>
+	var p_data  = [
+{
+   name:"Samsung Note 20 Ultra",
+   price: "190.99",
+   img:"https://i5.walmartimages.com/asr/05b39bde-392b-4ca4-a20a-334eded4c4cc.10fd04fc514882b138dbd9ca747af587.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+},
+
+{
+	name:"Lenovo Flex",
+	price: "290.89",
+	img:"https://i5.walmartimages.com/asr/d1021115-1a0d-4098-94b8-b3ee6873908b.6901cd31adb05412b97ae94f4041991c.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+ {
+	name:"10000Mah powerbank portable charger",
+	price: "55.52",
+	img:"https://i5.walmartimages.com/asr/47ad766c-e6b7-4cb9-bd86-acffc69676f5_1.9c2ce7e705bbabb41d965a6c2c7884ab.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+ {
+   name:"hp 14inch ryzen",
+   price: "352.00",
+   img:"https://i5.walmartimages.com/asr/1e7211d1-6452-48cf-afb0-a3adb1b847f2.8717ef00d5b64c1e54f8da74211d0f3c.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+},
+
+{
+	name:"Lenevo 14s Core i3 7th Gen",
+	price: "678.28",
+	img:"https://i5.walmartimages.com/asr/a03d58dd-531a-4b91-bbe4-ba5e4aa7a016.99b6d84eb43bca57d0dcbe29a813506a.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+ {
+	name:"Vivo 19",
+	price: "500.00",
+	img:"https://i5.walmartimages.com/asr/6ac861b1-39b7-49f2-b59c-f84054ebce4f.509dba035dc9b74987eff023fc04714d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+ {
+   name:"HP 15'' Pentium",
+   price: "456.00",
+   img:"https://i5.walmartimages.com/asr/283775ec-2e54-43b6-ab74-dcb5e682dbe2_1.311a277573464c3735ccff9999b4175e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+},
+{
+   name:"Samsung Note 20 Ultra",
+   price: "259.88",
+   img:"https://i5.walmartimages.com/asr/05b39bde-392b-4ca4-a20a-334eded4c4cc.10fd04fc514882b138dbd9ca747af587.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+},
+
+{
+	name:"Lenovo Flex",
+	price: "200.12",
+	img:"https://i5.walmartimages.com/asr/d1021115-1a0d-4098-94b8-b3ee6873908b.6901cd31adb05412b97ae94f4041991c.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+ {
+	name:"10000Mah powerbank portable charger",
+	price: "99.00",
+	img:"https://i5.walmartimages.com/asr/96fedd87-2b41-4c91-9856-0dc66dde8d6b_1.7b3a92ae721393447531ed54b1681b25.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+ {
+   name:"hp 14inch ryzen",
+   price: "99.89",
+   img:"https://i5.walmartimages.com/asr/1e7211d1-6452-48cf-afb0-a3adb1b847f2.8717ef00d5b64c1e54f8da74211d0f3c.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+},
+
+
+{
+	name:"Iphone 13  128GB Silver",
+	price: "359.00",
+	img:"https://i5.walmartimages.com/asr/4b81740c-90f6-4ca8-a039-186cd5c03fe8.04cb7a65a67e4e6cf2afac724cad9da6.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+ {
+	name:"Skullcandy Hesh2 Wireless Headphone",
+	price: "99.00",
+	img:"https://i5.walmartimages.com/asr/ba7cd9fe-c332-4650-b014-ab425642b00f.1180556735ba1ff0356d2f2ace5ac004.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+ {
+   name:"Samsung Smart Tv",
+   price: "1200.00",
+   img:"https://i5.walmartimages.com/asr/af3386f1-ab5b-44ca-ad21-88304c613fe6.6c781355173b6745e2f9adcafe20f110.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"
+},
+
+{
+	name:"Rii Primer RGB Compact Keyboard",
+	price: "300.00",
+	img:"https://i5.walmartimages.com/asr/c0cfd9df-a8ad-478d-a6c4-49440ba784c1.a82140ad6e44dc266fc788bcc2342549.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+ {
+	name:"Play Station 4",
+	price: "450.23",
+	img:"https://i5.walmartimages.com/asr/bb49560a-1e5e-4ac1-8b1e-a53597f44628_1.ceacbceb920d60041a6245961c2828f7.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+ },
+
+
+]
+
+var parent = document.getElementById("products");
+
+function   seeprod(a){
+	parent.innerHTML = null;
+	p_data.forEach(function (product){
+	let div = document.createElement("div");
+
+
+	let img = document.createElement("img");
+
+   img.src = product.img;
+	let prod_price = document.createElement("p");
+	prod_price.textContent = product.price;
+
+	let prod_name = document.createElement("p");
+	prod_name.textContent = product.name;
+
+     let add = document.createElement("button")
+	 add.innerText = "+ Add";
+	 add.onclick = function(){
+		 addtocart(product)
+	 }
+	
+
+	div.append(img,add,prod_price,prod_name);
+	parent.append(div)
+});
+}
+
+seeprod(p_data);
+
+if(localStorage.getItem("cart") ==null){
+localStorage.setItem("cart",JSON.stringify([]))
+}
+
+function addtocart(p){
+	let prodCart = JSON.parse(localStorage.getItem("cart"))
+	prodCart.push(p)
+	localStorage.setItem("cart",JSON.stringify(prodCart))
+	console.log(prodCart)
+}
+
+
+
+function sortLtoH(){
+	let arr = p_data.sort(function(a,b){
+		return a.price - b.price;
+	})
+	seeprod(arr)
+}
+
+function sortHtoL(){
+	let arr = p_data.sort(function(a,b){
+		return b.price - a.price;
+	})
+	seeprod(arr)
+}
+function filterbyPrice(){
+	let arr = p_data.filter(function(a){
+		return  a<=1000
+	})
+	seeprod(arr)
+}
+let pro = document.getElementById("products")
+let aw = pro.getElementsByTagName("p")
+var totalcart = Number(aw[1].textContent)
+console.log(totalcart)
+
+
+
+</script>

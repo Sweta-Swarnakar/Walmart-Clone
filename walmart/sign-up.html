@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>login</title>
+
+    <style>
+form{
+            width: 10%;
+        }
+    
+        #container{
+            max-width: 500px;
+            margin: auto;
+            
+
+        }
+        #img_link{
+            padding-left: 110px ;
+            padding-top: 10px;
+            justify-content: center;
+        }
+        .inputClass{
+            padding: 18px;
+            margin-bottom: 2px;
+            width: 320px;
+            margin-top: 6%;
+            border-radius: 5px;
+            border: 1px solid rgb(158, 158, 158);
+        }
+        #myForm{
+            width: 370px;
+            margin: 5px 60px;
+         
+        }
+        h3{
+            margin :20px 110px 5px 110px;
+        }
+        ul{
+            margin-top:0px;
+           
+            /* visibility: hidden; */
+        }
+        li{
+            color: rgb(39, 39, 39);
+        }
+        .main-content{
+            text-decoration: underline;
+            color: black;
+            cursor: pointer;
+        }
+      
+        .content{
+            display: none;
+        }
+        .main-content:hover .content{
+            display: inline-block;
+        }
+        #descripPass{
+            margin-bottom: 0px;
+            font-size: 12px;
+          
+            /* visibility: hidden; */
+        }
+    
+        #checkpara{
+            margin-top: 8px;
+            color: rgb(80, 79, 79);
+            font-size: 12px;
+        }
+        #IstCheck_btn{
+            padding-top: 0px;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        #IIcheck_btn{
+            padding: 0px;
+            font-size: 12px;
+           
+        }
+        .submit_btn{
+            width: 100%;
+            padding: 15px;
+            border-radius: 30px;
+            background-color: #0065FF;
+            color: white;
+            font-size: 15px;
+            border: 1px solid #0065FF;
+            cursor: pointer;
+        }
+        .submit_btn:hover{
+            background-color: #1b53ac;
+        }
+        #account-para{
+            text-align: center;
+        }
+        #sign-in{
+            background-color: white;
+            border: 1px solid black; 
+        }
+        #change-text{
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+        }
+        #change-text:hover{
+            color: rgb(104, 102, 102);
+        }
+        .para-color{
+            color: rgb(85, 84, 84);
+            font-size: 12px;
+        }
+        .fnt{
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <h1>Sign UP</h1>
+    <form onsubmit="signup(event)" action="" id="myForm">
+       
+        <input type="text" id="name" placeholder="name" >
+        <input type="text" id="email" placeholder="email">
+        <input type="password" id="password" placeholder="password">
+        <input type="submit" >
+
+    </form> -->
+
+
+
+
+
+    <div id="container">
+        <div id="img_link"><a href="C:\Users\HP\Documents\GitHub\Walmart\walmart\index001.html"><img src="https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg" alt=""></a></div>
+        <h3>Create your Walmart account </h3>
+        <div>
+
+            <!-- create form -->
+
+            <form onsubmit="signup(event)" action="" id="myForm">
+       
+                <input type="text" id="fname" class="inputClass" outocomplete="off" placeholder="First name" >
+                 <input type="text" id="lname" class="inputClass" placeholder="Last name">
+                <input type="text" id="email" class="inputClass" placeholder="Email address">
+                <input type="password" id="password" class="inputClass" placeholder="Create a password">
+
+                 <div id="IstCheck_btn">
+                    <input type="checkbox" id="check_signed" name="keepMe" value="">
+                    <label for=""> <b> Keep me signed in</b></label>
+                    <p id="checkpara">Uncheck if using a public device. <span class="main-content"> More</span> 
+                        <span class="content">We'll keep you signed in on this device. You may be asked to enter your password when modifying sensitive account information.</span>  </p>
+
+                 </div>
+                
+                 <div id="IIcheck_btn"> <input type="checkbox" id="sendMe" name="sendMe" value="">
+                    <label for="" class="para-color">Send me emails about new arrivals, hot items, daily savings, & more.</label>
+                </div>
+                <p class="para-color">By clicking Create Account, you acknowledge you have read and agreed to our <a href="">Terms of Use</a  > Terms of Use and <a href=""> Privacy Policy</a>.</p>
+                 <input type="submit" class="submit_btn" value="Create account" >
+                <p id="account-para"> Already have an account?</p>
+                <button class="submit_btn" id="sign-in"><b><a id="change-text" href="sign-in.html">Sign in</a> </b></button>
+        
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    function  signup(e){
+
+        e.preventDefault();
+        let myForm = document.getElementById("myForm")
+
+        let fname = myForm.fname.value; 
+        let lname = myForm.lname.value; 
+        let email = myForm.email.value;
+        let password = myForm.password.value;
+       
+
+        if (localStorage.getItem("users")=== null) {
+            localStorage.setItem("users", JSON.stringify([]));
+        }
+
+        //0. grab and prepare user data
+
+        let user = {
+            fname,
+            lname ,
+            email ,
+            password
+        };
+
+        // 1. get array from local storage 
+
+       // console.log(user)
+
+       let arr = JSON.parse(localStorage.getItem("users"))
+
+       //2. push new user to array
+
+        arr.push(user)// added a new data
+        localStorage.setItem("users",JSON.stringify(arr))
+
+    }
+
+
+</script>
