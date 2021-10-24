@@ -26,16 +26,14 @@
 		 justify-content:center;
 		 align-items:center;
 		 font-size:15px;
-			font-family: 'Domine', serif;
-           font-family: 'Noto Sans Display', sans-serif;
+		 font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 		   border:0px solid red
 		}
 		.depdiv{
 			position:relative;
 			display:block;
 			font-size:20px;
-			font-family: 'Domine', serif;
-           font-family: 'Noto Sans Display', sans-serif;
+			font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 		   color:white;
 		   margin:24px;
 		   border:5px solid red
@@ -49,9 +47,7 @@
 		  margin:8px 1350px 0px 0px;
 		  border-style:none;
 		  font-size:25px;
-		  font-family: 'Domine', serif;
-          font-family: 'Noto Sans Display', sans-serif;
-          font-family: 'Yaldevi', sans-serif;
+		  font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 
 		  
 		}
@@ -115,7 +111,7 @@
 			background-color:rgb(242,248,252);
 			padding:5% 0% 5% 5%;
 			font-size:25px;
-			font-family: 'Roboto', sans-serif;
+			font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 			margin-bottom:3%;
 			
 			
@@ -143,7 +139,7 @@
 			margin:3% 0% 3% 6%;
 			border:0px solid red;
 			padding : 3%;
-			font-family: 'Roboto', sans-serif;
+			font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 			font-size:80%;
 			background-color:rgb(242,248,252);
 			display:flex;
@@ -158,7 +154,7 @@
 			text-align: center;
 			width:180px;
 			border-radius:1.5em;
-			font-family: 'Roboto', sans-serif;
+			font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 
 		}
 		.placeorder{
@@ -228,6 +224,7 @@
 			border:1px solid rgb(242,248,252);;
 			margin:3% 2% 0% 0%;
 			padding:2%;
+			font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 		}
 		.r2{
 			width:96%;
@@ -235,6 +232,7 @@
 			border:1px solid rgb(242,248,252);;
 			margin:0% 2% 0% 0%;
 			padding:2%;
+			font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 		}
 		.r3{
 			width:96%;
@@ -242,6 +240,8 @@
 			border:1px solid rgb(242,248,252);;
 			margin:0% 2% 0% 3%;
 			padding:2%;
+			
+			font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 		}
 		.mr{
 			margin:3% 3% 0% 3%;
@@ -391,7 +391,7 @@
 			
 			
 			font-size:25px;
-			font-family: 'Roboto', sans-serif;
+			font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 			margin:0%;
 			
 			
@@ -406,7 +406,7 @@
 			
 			
 			font-size:15px;
-			font-family: 'Roboto', sans-serif;
+			font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
 			margin:0%;
 			
 			
@@ -520,6 +520,11 @@
         .fnt{
             font-size: 12px;
         }
+		#cartAmount{
+			border: 0px solid black;
+			padding: 0px;
+			margin: 0px 10px 10px 230px
+		}
 		
 	</style>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -623,7 +628,10 @@
 				  </div>
 				  <div class = "tnc">By placing this order, you agree to our Privacy Policy and Terms of Use</div>
 		<div class = "r1">
-			<div class ="subtotal"><b >Subtotal</b></div>
+			<div class ="subtotal" ><b >Subtotal</b>
+			
+		
+			</div>
 			<div class ="subtotal"><b >Estimated taxes</b></div>
 		</div>
 		<div class = "r2">
@@ -726,7 +734,7 @@ let amount = 0;
 for(let i = 0; i < cart.length; i++){
 	amount+=Number(cart[i].price);
 }
-cost.textContent =amount
+cost.textContent = "$" + amount
 
 
 

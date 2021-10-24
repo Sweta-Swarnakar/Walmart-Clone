@@ -160,7 +160,7 @@ form{
                     <label for="" class="para-color">Send me emails about new arrivals, hot items, daily savings, & more.</label>
                 </div>
                 <p class="para-color">By clicking Create Account, you acknowledge you have read and agreed to our <a href="">Terms of Use</a  > Terms of Use and <a href=""> Privacy Policy</a>.</p>
-                 <input type="submit" class="submit_btn" value="Create account" >
+                 <input type="submit" class="submit_btn" onclick="success()" value="Create account" >
                 <p id="account-para"> Already have an account?</p>
                 <button class="submit_btn" id="sign-in"><b><a id="change-text" href="sign-in.html">Sign in</a> </b></button>
         
@@ -207,6 +207,9 @@ form{
         arr.push(user)// added a new data
         localStorage.setItem("users",JSON.stringify(arr))
 
+    }
+    function success(){
+        alert("Account Created")
     }
 
 

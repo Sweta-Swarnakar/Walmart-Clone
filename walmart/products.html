@@ -13,13 +13,16 @@
 			display: flex;
             padding: 10px;
 			margin-top: 100px;
+			border: 1px solid black;
+			padding-left:33%;
+			align-items: right;
 		}
 		#container > div{
 			margin-right: 20px;
 		}
 		.btn_header{
-			width: 150px;
-			padding: 15px 10px;
+			width: 140px;
+			padding: 15px 10px 30px 10px;
 			border-radius: 20px;
 			border: 0px solid rgb(2, 123, 236);
 			background-color: rgb(2, 123, 236);
@@ -481,7 +484,7 @@
 			<div><button class="btn_header" onclick = "sortHtoL()"> Sort High To Low</button></div>
 			<div><button class="btn_header" onclick = "filterbyPrice()"> Filter</button></div>
 		  
-			 <div><a href="C:\Users\HP\Desktop\MasaiHTML\eCommerce_website\online-jwellery\cart.html"><button class="btn_header"> Cart</button></a></div>
+			 <!-- <div><a href="C:\Users\HP\Desktop\MasaiHTML\eCommerce_website\online-jwellery\cart.html"><button class="btn_header"> Cart</button></a></div> -->
 		</div>
 		<div id ="products"></div>
 
@@ -592,7 +595,7 @@ function   seeprod(a){
 
    img.src = product.img;
 	let prod_price = document.createElement("p");
-	prod_price.textContent = product.price;
+	prod_price.textContent = "$"+product.price ;
 
 	let prod_name = document.createElement("p");
 	prod_name.textContent = product.name;
@@ -601,6 +604,7 @@ function   seeprod(a){
 	 add.innerText = "+ Add";
 	 add.onclick = function(){
 		 addtocart(product)
+		 alert("product added")
 	 }
 	
 
