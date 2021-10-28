@@ -135,7 +135,7 @@ form{
 
 
     <div id="container">
-        <div id="img_link"><a href="C:\Users\HP\Documents\GitHub\Walmart\walmart\index001.html"><img src="https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg" alt=""></a></div>
+        <div id="img_link"><a href="index001.html"><img src="https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg" alt=""></a></div>
         <h3>Create your Walmart account </h3>
         <div>
 
@@ -168,49 +168,7 @@ form{
         </div>
 
     </div>
+    <script src="./script/signInUp.js"></script>
 </body>
 </html>
 
-<script>
-    function  signup(e){
-
-        e.preventDefault();
-        let myForm = document.getElementById("myForm")
-
-        let fname = myForm.fname.value; 
-        let lname = myForm.lname.value; 
-        let email = myForm.email.value;
-        let password = myForm.password.value;
-       
-
-        if (localStorage.getItem("users")=== null) {
-            localStorage.setItem("users", JSON.stringify([]));
-        }
-
-        //0. grab and prepare user data
-
-        let user = {
-            fname,
-            lname ,
-            email ,
-            password
-        };
-
-        // 1. get array from local storage 
-
-       // console.log(user)
-
-       let arr = JSON.parse(localStorage.getItem("users"))
-
-       //2. push new user to array
-
-        arr.push(user)// added a new data
-        localStorage.setItem("users",JSON.stringify(arr))
-
-    }
-    function success(){
-        alert("Account Created")
-    }
-
-
-</script>
