@@ -47,25 +47,27 @@
 			a:hover{
 				text-decoration: none;
 			}
-			.search_box{
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-			.search_btn{
-				width: 30px;
-				height: 30px;
+			.searchIcon{
+				width: 20px;
+				height: 20px;
+				padding: 5px;
 				background-color: yellow;
-				border-radius: 50px;
-				color: black;
-				position: absolute;
-				right: 2.3rem;
-				display: grid;
-				place-items: center;
-
+				border-radius: 50%;
 			}
-
+			.search-box{
+				display: flex;
+				border: 1px solid #ccc;
+				margin: 22px 10px;
+				padding: 5px 10px;
+				border-radius: 30px;
+				background-color: white;
+			}
+			.search-box input{
+				width: 400px;
+				border: 0;
+				outline: 0;
+				background: transparent;
+			}
 			.depdiv{
 				position:relative;
 				display:block;
@@ -550,7 +552,7 @@
     <div class = "navbar">
 		
         <div >
-            <a href="C:\Users\HP\Documents\GitHub\Walmart\walmart\index001.html"><img src= "https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg" /> </a>
+            <a href="index001.html"><img src= "https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg" /> </a>
         </div>
         <div class="dropdown">
             <li class="dropbtn"><a href="#" ><i class="fas fa-th-large icon"></i></a>Departments</li>
@@ -585,11 +587,10 @@
         
     
             
-                
-        <div class="search_box">
-                <input type="text" id =  "Search" placeholder="Search Everything at Walmart online and in store" >
-                <a href="#"  class="search_btn"><i class="fas fa-search "></i></a>
-        </div>
+        <div class="search-box">
+            <input type="text" id =  "Search" placeholder="Search Everything at Walmart online and in store" >
+            <img class="searchIcon" src="https://cdn.iconscout.com/icon/free/png-256/search-1399-475061.png" alt="">
+    </div>
 
         <div class="dropdown">
             <li class="dropbtn"><a href="#" ><i class="far fa-folder icon"></i></a>My Items</li>
@@ -753,34 +754,7 @@
     </div>
 
 
-
+    <script src="./script/proDetails.js"></script>
 </body>
 </html>
 
-<script>
-    function clickimg(smallImg){
-        var fullImg = document.getElementById("image-box") ;  //change small image path to main image
-        fullImg.src = smallImg.src
-    }
-
-
-
-
-
-
-	let parent = document.getElementById("products")
-///console.log(parent)
-
-let cart = JSON.parse(localStorage.getItem("cart"));
-console.log(cart)
-let size = document.getElementById("cartSize");
-size.textContent =cart.length;
-let cost = document.getElementById("cartAmount");
-let amount = 0;
-for(let i = 0; i < cart.length; i++){
-	amount+=Number(cart[i].price);
-}
-cost.textContent =amount
-
-
-</script>
