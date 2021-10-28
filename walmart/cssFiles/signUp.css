@@ -1,0 +1,111 @@
+
+form{
+            width: 10%;
+        }
+    
+        #container{
+            max-width: 500px;
+            margin: auto;
+            
+
+        }
+        #img_link{
+            padding-left: 110px ;
+            padding-top: 10px;
+            justify-content: center;
+        }
+        .inputClass{
+            padding: 18px;
+            margin-bottom: 2px;
+            width: 320px;
+            margin-top: 6%;
+            border-radius: 5px;
+            border: 1px solid rgb(158, 158, 158);
+        }
+        #myForm{
+            width: 370px;
+            margin: 5px 60px;
+         
+        }
+        h3{
+            margin :20px 110px 5px 110px;
+        }
+        ul{
+            margin-top:0px;
+           
+            /* visibility: hidden; */
+        }
+        li{
+            color: rgb(39, 39, 39);
+        }
+        .main-content{
+            text-decoration: underline;
+            color: black;
+            cursor: pointer;
+        }
+      
+        .content{
+            display: none;
+        }
+        .main-content:hover .content{
+            display: inline-block;
+        }
+        #descripPass{
+            margin-bottom: 0px;
+            font-size: 12px;
+          
+            /* visibility: hidden; */
+        }
+    
+        #checkpara{
+            margin-top: 8px;
+            color: rgb(80, 79, 79);
+            font-size: 12px;
+        }
+        #IstCheck_btn{
+            padding-top: 0px;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        #IIcheck_btn{
+            padding: 0px;
+            font-size: 12px;
+           
+        }
+        .submit_btn{
+            width: 100%;
+            padding: 15px;
+            border-radius: 30px;
+            background-color: #0065FF;
+            color: white;
+            font-size: 15px;
+            border: 1px solid #0065FF;
+            cursor: pointer;
+        }
+        .submit_btn:hover{
+            background-color: #1b53ac;
+        }
+        #account-para{
+            text-align: center;
+        }
+        #sign-in{
+            background-color: white;
+            border: 1px solid black; 
+        }
+        #change-text{
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+        }
+        #change-text:hover{
+            color: rgb(104, 102, 102);
+        }
+        .para-color{
+            color: rgb(85, 84, 84);
+            font-size: 12px;
+        }
+        .fnt{
+            font-size: 12px;
+        }
+
+  
