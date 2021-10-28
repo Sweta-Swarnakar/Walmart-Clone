@@ -50,23 +50,26 @@
 			a:hover{
 				text-decoration: none;
 			}
-			.search_box{
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-			.search_btn{
-				width: 30px;
-				height: 30px;
+			.searchIcon{
+				width: 20px;
+				height: 20px;
+				padding: 5px;
 				background-color: yellow;
-				border-radius: 50px;
-				color: black;
-				position: absolute;
-				right: 2.3rem;
-				display: grid;
-				place-items: center;
-
+				border-radius: 50%;
+			}
+			.search-box{
+				display: flex;
+				border: 1px solid #ccc;
+				margin: 22px 10px;
+				padding: 5px 10px;
+				border-radius: 30px;
+				background-color: white;
+			}
+			.search-box input{
+				width: 400px;
+				border: 0;
+				outline: 0;
+				background: transparent;
 			}
 
 			.depdiv{
@@ -699,9 +702,9 @@
     
             
                 
-        <div class="search_box">
+        <div class="search-box">
                 <input type="text" id =  "Search" placeholder="Search Everything at Walmart online and in store" >
-                <a href="#"  class="search_btn"><i class="fas fa-search "></i></a>
+                <img class="searchIcon" src="https://cdn.iconscout.com/icon/free/png-256/search-1399-475061.png" alt="">
         </div>
 
         <div class="dropdown">
@@ -1074,48 +1077,7 @@
 			</div>
 						
 		</div>
-
+<script src="./script/index.js"></script>
 </body>
 </html>
 
-
- <script>
-   setInterval(function(){
-    if ( document.getElementsByClassName("slider")[0].classList.contains("active")){   // check for active class for the 1st div
-        document.getElementsByClassName("slider")[1].classList.add("active")             //active 2nd div 
-        document.getElementsByClassName("slider")[0].classList.remove("active")          // remove Ist div from active class
-    }else if ( document.getElementsByClassName("slider")[1].classList.contains("active") ){
-        document.getElementsByClassName("slider")[2].classList.add("active")       
-        document.getElementsByClassName("slider")[1].classList.remove("active") 
-    }else if ( document.getElementsByClassName("slider")[2].classList.contains("active") ){
-        document.getElementsByClassName("slider")[0].classList.add("active")       
-        document.getElementsByClassName("slider")[2].classList.remove("active") 
-    }
-},3000);
-
-function next(){
-    if ( document.getElementsByClassName("slider")[0].classList.contains("active")){   // check for active class for the 1st div
-        document.getElementsByClassName("slider")[1].classList.add("active")             //active 2nd div 
-        document.getElementsByClassName("slider")[0].classList.remove("active")          // remove Ist div from active class
-    }else if ( document.getElementsByClassName("slider")[1].classList.contains("active") ){
-        document.getElementsByClassName("slider")[2].classList.add("active")       
-        document.getElementsByClassName("slider")[1].classList.remove("active") 
-    }else if ( document.getElementsByClassName("slider")[2].classList.contains("active") ){
-        document.getElementsByClassName("slider")[0].classList.add("active")       
-        document.getElementsByClassName("slider")[2].classList.remove("active") 
-    }
-}
-
-function prev(){
-    if ( document.getElementsByClassName("slider")[0].classList.contains("active")){   // check for active class for the 1st div
-        document.getElementsByClassName("slider")[2].classList.add("active")             //active last div 
-        document.getElementsByClassName("slider")[0].classList.remove("active")          // remove Ist div from active class
-    }else if ( document.getElementsByClassName("slider")[2].classList.contains("active") ){
-        document.getElementsByClassName("slider")[1].classList.add("active")       
-        document.getElementsByClassName("slider")[2].classList.remove("active") 
-    }else if ( document.getElementsByClassName("slider")[1].classList.contains("active") ){
-        document.getElementsByClassName("slider")[0].classList.add("active")       
-        document.getElementsByClassName("slider")[1].classList.remove("active") 
-    }
-}
-</script>
