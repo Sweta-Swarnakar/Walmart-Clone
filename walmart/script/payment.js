@@ -24,7 +24,9 @@ window.onclick = function(event) {
   }
 }
 
-
+function success(){
+  alert("Congratulations, Your Order is Placed Thank You !")
+}
 
 
 let parent = document.getElementById("products")
