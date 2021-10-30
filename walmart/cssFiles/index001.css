@@ -1,8 +1,6 @@
 
   
-      *{
-          font-family: 'Domine', serif;
-      }
+      
           .navbar{
               display: flex;
               height:90px;
@@ -11,7 +9,7 @@
               color:white;
               top:0%;
               left:0%;
-              
+              border:0px solid red;
               position:fixed;
               z-index: 1;
           }
@@ -68,7 +66,8 @@
               position:relative;
               display:block;
               font-family: 'Domine', serif;
-              color:white;
+              color:white; 
+             
               margin:25px 10px;
               padding: 8px;
               border-radius: 30px;
