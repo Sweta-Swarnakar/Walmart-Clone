@@ -11,7 +11,7 @@ function signin(e) {
     all_users.forEach(function (user){
         if(email === user.email && password === user.password){
             
-            window.location.href = "products.html";
+            window.location.href = "/html/products.html";
         }
     })
     }
