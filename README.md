@@ -33,24 +33,20 @@ Clone of Walmart
 
 
 - Login/Signup
-![Login](/images/Singup.png)
-<img src="/images/Singup.png" width="49%"> <img src="./images/preview/otp_overlay.png" width="49%">
+![Login](/images/signup.png)
+<!-- <img src="/images/Singup.png" width="49%"> <img src="./images/preview/otp_overlay.png" width="49%"> -->
 
 
 - Product Detail Page
-![Product Detail Page](./images/preview/product_detail.png)
+![Product Detail Page](/images/products.png)
 
 - Category Page
 ![Category Page](./images/preview/category_page.png)
 
-- Product Cart
-![Product Cart Page](./images/preview/mycart.png)
-![Product Cart Overlay](./images/preview/cart_overlay.png)
-
 
 - Payment Page
 ![Payment Delivery Page](./images/preview/delivery_address.png)
-![Payment Review Page](./images/preview/review_payment.png)
+![Payment Review Page](/images/payment.png)
 
 
 
