@@ -32,8 +32,10 @@ Clone of Walmart
 
 
 
-- Login/Signup
+-Signup
 ![Signup](/images/signup.png)
+
+-Login
 ![Login](/images/Signin.png)
 <!-- <img src="/images/Singup.png" width="49%"> <img src="./images/preview/otp_overlay.png" width="49%"> -->
 
