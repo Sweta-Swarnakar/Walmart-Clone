@@ -27,14 +27,14 @@ Clone of Walmart
 
 ## Screenshots 
 - Landing Page
-![Landing Page](./images/Home.png)
-<img src="./images/preview/Home_product_catalogue.png" width="49%"> <img src="./images/preview/category_nav.png" width="49%">
+![Landing Page](/images/home.png)
+<img src="/images/home.png" width="49%"> <img src="./images/preview/category_nav.png" width="49%">
 
 
 
 - Login/Signup
-![Login](./images/preview/Login_overlay.png)
-<img src="./images/preview/Signup_overlay.png" width="49%"> <img src="./images/preview/otp_overlay.png" width="49%">
+![Login](/images/Singup.png)
+<img src="/images/Singup.png" width="49%"> <img src="./images/preview/otp_overlay.png" width="49%">
 
 
 - Product Detail Page
