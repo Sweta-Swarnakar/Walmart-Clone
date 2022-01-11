@@ -27,7 +27,7 @@ Clone of Walmart
 
 ## Screenshots 
 - Landing Page
-![Landing Page](./images/preview/Home.png)
+![Landing Page](./images/Home.png)
 <img src="./images/preview/Home_product_catalogue.png" width="49%"> <img src="./images/preview/category_nav.png" width="49%">
 
 
