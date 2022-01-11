@@ -41,12 +41,10 @@ Clone of Walmart
 - Product Detail Page
 ![Product Detail Page](/images/products.png)
 
-- Category Page
-![Category Page](./images/preview/category_page.png)
 
 
 - Payment Page
-![Payment Delivery Page](./images/preview/delivery_address.png)
+
 ![Payment Review Page](/images/payment.png)
 
 
