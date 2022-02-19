@@ -65,6 +65,11 @@
 			border:1px solid red
 			
 		}
+		.nqw{
+			width:10%;
+			height:65px;
+			max-width: 20%;
+		}
 		.tanishq{
          text-align: center;
 		}
@@ -114,6 +119,7 @@
 				width: 20px;
 				height: 20px;
 				padding: 5px;
+				margin-left:40px;
 				background-color: yellow;
 				border-radius: 50%;
 			}

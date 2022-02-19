@@ -188,7 +188,13 @@
 		
 
 		}
-		
+		a:link {
+            text-decoration: none;
+			
+        }
+		a{
+			color:white;
+		}
 		.tnc{
 			font-size:9px;
 			text-align: center;
@@ -520,4 +526,7 @@
 			margin: 0px 10px 10px 230px
 		}
 		
-	
+	.xa{
+		text-decoration: none;
+		color:white
+	}
